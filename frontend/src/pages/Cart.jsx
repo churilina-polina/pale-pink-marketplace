@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import { CATEGORY_ICONS } from "../constants/categories";
 
 export default function Cart() {
   const { cart, updateItem, removeItem } = useCart();
@@ -29,7 +30,7 @@ export default function Cart() {
               {item.product.image_url ? (
                 <img src={item.product.image_url} alt={item.product.title} />
               ) : (
-                <span>👗</span>
+                <span>{CATEGORY_ICONS[item.product.category] || "👕"}</span>
               )}
             </div>
             <div className="cart-item-info">

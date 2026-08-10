@@ -1,14 +1,6 @@
 import { Link } from "react-router-dom";
 import StarRating from "./StarRating";
-
-const CATEGORY_LABELS = {
-  tops: "Футболки и топы",
-  dresses: "Платья",
-  outerwear: "Верхняя одежда",
-  bottoms: "Брюки и джинсы",
-  shoes: "Обувь",
-  accessories: "Аксессуары",
-};
+import { CATEGORY_ICONS, CATEGORY_LABELS } from "../constants/categories";
 
 export default function ProductCard({ product, onToggleWishlist, showWishlist = true }) {
   return (
@@ -17,7 +9,7 @@ export default function ProductCard({ product, onToggleWishlist, showWishlist = 
         {product.image_url ? (
           <img src={product.image_url} alt={product.title} className="product-card-image" />
         ) : (
-          <div className="product-card-placeholder">👗</div>
+          <div className="product-card-placeholder">{CATEGORY_ICONS[product.category] || "👕"}</div>
         )}
         {showWishlist && (
           <button

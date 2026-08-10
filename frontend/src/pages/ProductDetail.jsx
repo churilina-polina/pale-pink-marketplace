@@ -4,15 +4,7 @@ import StarRating from "../components/StarRating";
 import client from "../api/client";
 import { useAuth } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
-
-const CATEGORY_LABELS = {
-  tops: "Футболки и топы",
-  dresses: "Платья",
-  outerwear: "Верхняя одежда",
-  bottoms: "Брюки и джинсы",
-  shoes: "Обувь",
-  accessories: "Аксессуары",
-};
+import { CATEGORY_ICONS, CATEGORY_LABELS } from "../constants/categories";
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -79,7 +71,9 @@ export default function ProductDetail() {
           {product.image_url ? (
             <img src={product.image_url} alt={product.title} className="product-detail-image" />
           ) : (
-            <div className="product-card-placeholder" style={{ fontSize: 96 }}>👗</div>
+            <div className="product-card-placeholder" style={{ fontSize: 96 }}>
+              {CATEGORY_ICONS[product.category] || "👕"}
+            </div>
           )}
         </div>
 

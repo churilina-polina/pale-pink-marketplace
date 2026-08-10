@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import client from "../api/client";
+import { CATEGORY_ICONS } from "../constants/categories";
 
 export default function SellerDashboard() {
   const [products, setProducts] = useState([]);
@@ -53,7 +54,11 @@ export default function SellerDashboard() {
         {products.map((product) => (
           <div key={product.id} className="seller-product-row card">
             <div className="seller-product-image">
-              {product.image_url ? <img src={product.image_url} alt={product.title} /> : <span>👗</span>}
+              {product.image_url ? (
+                <img src={product.image_url} alt={product.title} />
+              ) : (
+                <span>{CATEGORY_ICONS[product.category] || "👕"}</span>
+              )}
             </div>
             <div className="seller-product-info">
               <span className="cart-item-title">{product.title}</span>

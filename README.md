@@ -36,13 +36,15 @@
 ## Запуск через Docker
 
 ```bash
-git clone <repo-url>
-cd marketplace
+git clone https://github.com/churilina-polina/pale-pink-marketplace.git
+cd pale-pink-marketplace
 docker compose up --build
 ```
 
 - Фронтенд: `http://localhost:5174`
 - API: `http://localhost:8001`, документация — `http://localhost:8001/docs/`
+
+При старте контейнера автоматически применяются миграции и создаются демо-товары и аккаунты (пароль `DemoPass123`: продавцы `cozy_studio`, `urban_thread`, `pale_pink`, покупатель `demo_buyer`).
 
 ## Локальный запуск без Docker
 

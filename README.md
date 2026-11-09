@@ -1,5 +1,6 @@
 # Pale & Pink — маркетплейс одежды
 
+[![CI](https://github.com/churilina-polina/pale-pink-marketplace/actions/workflows/ci.yml/badge.svg)](https://github.com/churilina-polina/pale-pink-marketplace/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-5.0-092E20?logo=django&logoColor=white)
 ![DRF](https://img.shields.io/badge/DRF-3.15-red)
@@ -8,6 +9,9 @@
 ![Docker](https://img.shields.io/badge/Docker-ready-2496ED?logo=docker&logoColor=white)
 
 Мини-маркетплейс одежды (аналог Wildberries в миниатюре): несколько независимых продавцов, каталог с фильтрами, корзина, оформление заказа с имитацией оплаты, отзывы, избранное и личный кабинет продавца. Светлый розовый интерфейс.
+
+> **In short (EN):** a small clothing marketplace with multiple sellers, catalog filters, cart, checkout with mock
+> payment, reviews, favorites and a seller dashboard. Django REST Framework + React, JWT, PostgreSQL, Docker, CI.
 
 ## Роли
 

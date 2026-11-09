@@ -13,6 +13,16 @@
 > **In short (EN):** a small clothing marketplace with multiple sellers, catalog filters, cart, checkout with mock
 > payment, reviews, favorites and a seller dashboard. Django REST Framework + React, JWT, PostgreSQL, Docker, CI.
 
+## Скриншоты
+
+| Каталог | Карточка товара |
+|---|---|
+| ![Каталог](docs/screenshots/catalog.png) | ![Карточка товара](docs/screenshots/product.png) |
+
+Кабинет продавца:
+
+![Кабинет продавца](docs/screenshots/seller-dashboard.png)
+
 ## Роли
 
 - **Покупатель** — просматривает каталог, добавляет в корзину/избранное, оформляет заказы, оставляет отзывы.
